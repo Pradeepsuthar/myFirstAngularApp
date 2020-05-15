@@ -1,0 +1,28 @@
+<div class="p-2">
+    <h3><i class="fa fa-list-alt"></i> All Users</h3>
+</div>
+<div class="container">
+    <table class="table table-hover cursor-poointer table-responsive-sm">
+        <thead>
+            <tr>
+                <th scope="col">EMP. Code</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Position</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of list">
+                <td (click)="onEdit(emp)">{{emp.empCode}}</td>
+                <td (click)="onEdit(emp)">{{emp.fullName}}</td>
+                <td (click)="onEdit(emp)">{{emp.position}}</td>
+                <td (click)="onEdit(emp)">{{emp.mobile}}</td>
+                <!-- <td><a class="btn text-danger" (click)="onDelete(emp.id)"><i class="fa fa-trash"></i></a></td> -->
+                <td title="Delete">
+                    <button class="border-0 bg-transparent btn-lg p-0" (click)="onDelete(emp.id)"><i class="fa fa-trash-o text-danger"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
